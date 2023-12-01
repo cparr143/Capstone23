@@ -12,12 +12,13 @@
 
     <section id="header">
         <a href="#"><img src="/" class="logo" alt=""></a>
+
         <div>
             <ul id="navbar">
                 <li><a href="index2.html">Home</a></li>
-                <li><a href="shop2.html">Shop</a></li>
+                <li><a class="active" href="shop2.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a class= "active" href="contact2.html">Contact</a></li>
+                <li><a href="contact2.html">Contact</a></li>
                 <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
@@ -27,74 +28,66 @@
             <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
             <i id="bar" class="fas fa-outdent"></i>
                     </div>
-                    </section>
+    </section>
+    
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="/" width:100% id="MainImg" alt="">
         
-    <section id="page-header">
-        <h2>#let's_chat</h2>
 
-        <p>LEAVE US A MESSAGE, WE'D LOVE TO HEAR FROM YOU!</p>
-        </section>
-
-        <section id="contact-details" class="section-p1 section-m1">
-            <div class="details">
-                <span>Stay Connected</span>
-                <h2>Visit our warehouse or contact us today</h2>
-                <h3>Warehouse Locations</h3>
-                <div>
-                    <li>
-                        <i class="fa fa-map"></i>
-                        <p>11887 Vctory Knoll circle, Louisville, Kentucky</p>
-                    </li>
-                    <li>
-                        <i class="fa fa-envelope"></i>
-                        <p>cierra.parr@yahoo.com</p>
-                    </li>
-                    <li>
-                        <i class="fa fa-phone-alt"></i>
-                        <p>502.909.5326</p>
-                    </li>
-                    <li>
-                        <i class="fa fa-clock"></i>
-                        <p>Mon- Fri: 10am-5pm</p>
-                    </li>
-                </div>
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="/" width="100%" class="small-img" alt="">
             </div>
-
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3134.
-                328692458615!2d-85.53926632490334!3d38.
-                2254794860715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-                1!3m3!1m2!1s0x8869a1e6bf96f211%3A0x84feca28c61d1d2e!2s11887%20Victory%20Knoll%20Cir%2C%20Middletown%2C%20KY%2040243!5e0!3m2!1sen!2sus!4v1701421886129!5m2!1sen!2sus"
-                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="small-img-col">
+                <img src="/" width="100%" class="small-img" alt="">
             </div>
-        </section>
-           
-<section id="form-details">
-    <form action="">
-        <span>LEAVE A MESSAGE</span>
-        <h2>We'd love to hear from you!</h2>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Subject">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message Here">
-    </textarea>
-    <button class="normal">Submit</button>
-    </form>
-
-    <div class="people">
-        <div>
-            <img src="images/cee.JPG" alt="picture of the creator">
-            <p><span>Cierra Parr</span> CEO <br> Phone: 502-909-5326 <br>Email: cierra.parr@yahoo.com</p>
+            <div class="small-img-col">
+                <img src="/" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="/" width="100%" class="small-img" alt="">
+            </div>
         </div>
-    </div>
-</section>
+    </div> 
+
+        <div class="single-pro-details">
+            <h6>Seeded Growth</h6>
+            <h4>8oz Elderberry Syrup</h4>
+            <h2>$22.22</h2>
+            <select>
+                <option>Select Jar Size</option>
+                <option>8oz jar</option>
+                <option>16oz jar</option>
+                <option>32oz jar</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>Boost your immune system with our Elderberry Syrup. Made fresh with organic, clean ingredients: distilled water, elderberries, raw local honey, ginger, ceylon cinnamon and ground cloves.
+
+                currently available to ship only within the US
+                
+                                
+                Lasts approximately 45-60 days in the refrigerator.
+                
+                Usage for adults: 1 Tbsp one-three times daily.
+                
+                Usage for children over the age of One: 1 tsp one-three times daily
+                
+                may take up to 3x daily to boost your immune system.
+                
+                not recommended for children under the age of 1. Customized elderberry syrup available upon request.</span>
+        </div>
+    </section>
+
+    
+
   
 
-        
+       
 
-        
-
-        
+              
             
 
             <section id="newsletter" class="section-p1 section-m1">
@@ -155,6 +148,20 @@
              </div>
 
             </footer>
+
+            <script>
+                var MainImg = document.getElementById(MainImg);
+                var smallimg = document.getElementsByClassName('small-img');
+                smallimg[0].onclick = function (){
+                    MainImg.scr = smallimg[0].src;
+                }
+                smallimg[1].onclick = function (){
+                    MainImg.scr = smallimg[1].src;
+                }
+                smallimg[2].onclick = function (){
+                    MainImg.scr = smallimg[2].src;
+                }
+            </script>
             
 
     
