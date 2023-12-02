@@ -926,8 +926,9 @@ footer .copyright {
     display: block;
     justify-content: space-around;
     text-align: center;
-    margin-bottom: 40%;
-    margin-top: 40%;
+    align-items: center;;
+    margin-bottom: 10%;
+    margin-top: 10%;
    }
 
    .days, 
