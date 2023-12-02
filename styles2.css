@@ -43,6 +43,7 @@ p {
     margin: 40px 0;
 }
 
+
 button.normal{
     font-size: 14px;
     font-weight: 600;
@@ -74,6 +75,11 @@ body {
     position: sticky;
     top: 0;
     left: 0;
+}
+
+#header img {
+    width:50%;
+    height:10%;
 }
 
 #navbar{
@@ -118,8 +124,8 @@ body {
 }
 
 #close{
-    display: none;
-}
+    display:none;
+    }
 
 /* Home Page*/
 
@@ -206,9 +212,9 @@ text-align: center;
     text-align: center;
 }
 
-#product1.pro-container {
+#product1 .pro-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top:20px;
     }
 
@@ -372,8 +378,9 @@ footer .col {
     margin-bottom: 20px;
 }
 
-footer .logo{
-    margin-bottom: 30px;
+#footer .logo{
+ width: 20%;
+    height:10%;
 }
 
 footer h4{
@@ -424,7 +431,7 @@ footer .copyright {
 
 /* Shop Page */
 #page-header {
-    background-image: url(images/elderberries2.jpg);
+    background-image: url(images/elderberry1.jpg);
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -473,7 +480,7 @@ footer .copyright {
 
 .small-img-group{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .small-img-col {
@@ -520,6 +527,7 @@ footer .copyright {
 #prodetails .single-pro-details span {
     line-height: 25px;
 }
+
 
 /* About Page */
 
@@ -670,6 +678,7 @@ footer .copyright {
         display: flex;
         align-items: center;
     }
+
     #mobile i{
         color: rgb(10, 10, 100);
         font-size: 12px;
@@ -678,10 +687,10 @@ footer .copyright {
 
     #close{
         display: initial;
-        position: absolute;
+       position: absolute;
         top: 30px;
         left: 30px;
-        color:burlywood ;
+        color:rgb(29, 27, 25) ;
         font-size: 24px;
     }
 
@@ -690,7 +699,7 @@ footer .copyright {
     }
 
     #hero {
-        height: 90vh;
+        height: 70vh;
         padding: 0 80px;
        background-position: top 30% right 30%;
     }
@@ -704,11 +713,10 @@ footer .copyright {
     }
     #product1 .pro-container {
         justify-content: center;
-        width: 100%;
     }
 
     #product1 .pro{
-        margin: 15px;
+        margin: 5px;
     }
 
     #banner {
@@ -729,13 +737,16 @@ footer .copyright {
     }
     }
 
+    /*media query for smaller devices*/
 
     @media (max-width:477px) {
+
         .section-p1 {
             padding: 20px;
         }
         #header {
             padding: 10px 30px;
+            
         }
 
         h2{
@@ -744,6 +755,54 @@ footer .copyright {
 
         h1{
             font-size: 38px;
+        }
+
+         #navbar {
+            display: flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:flex-start;
+            position: fixed;
+            top:0;
+            right: -300px;
+            height: 40vh;
+            width: 300px;
+            background-color: burlywood;
+            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+            padding: 80px 0 0 10px;
+            transition: 0.3s;
+        }
+    
+        #navbar.active{
+            right: 0px;
+        }
+    
+        #navbar li {
+            margin-bottom: 25px;
+        }
+    
+        #mobile{
+            display: flex;
+            align-items: center;
+        }
+    
+        #mobile i{
+            color: rgb(10, 10, 100);
+            font-size: 12px;
+            padding-left: 20px;
+        }
+    
+        #close{
+            display: initial;
+           position: absolute;
+            top: 30px;
+            left: 30px;
+            color:rgb(29, 27, 25) ;
+            font-size: 24px;
+        }
+    
+        #lg-bag {
+            display: none;
         }
 
         #hero{
@@ -761,12 +820,14 @@ footer .copyright {
         }
 
         #product1 .pro {
-            width:100%
+            width:100%;
         }
+
+        
 
         #banner{
             height:40vh;
-            width:100%
+            width:100%;
         }
 
         #newsletter{
@@ -780,6 +841,7 @@ footer .copyright {
         footer .copyright{
             text-align: start;
         }
+    }
 
         /*About Page*/
        /* #page-header.about-header{
@@ -849,38 +911,32 @@ footer .copyright {
         #prodetails .single-pro-details{
             width: 100%;
       }
-    }
+    
 
     /* Launch Clock*/
-    #container h1{
-        display: flex;
-        justify-content: center;
-        color: white;
-    }
+   .coming-soon {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   }
 
-    .countdown ul {
-        display: flex;
-        justify-content: center;
-    }
-    .countdown li{
-        list-style: none;
-        font-size: 1rem;
-        text-transform: uppercase;
-        text-align: center;
-    }
+   .countdown {
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 40%;
+    margin-top: 40%;
+   }
 
-    .countdown li span {
-        display: block;
-        font-size: 6rem;
-        color: blueviolet;
-    }
+   .days, 
+   .hours, 
+   .minutes, 
+   .seconds {
+    font-size: 3rem;
+   }
 
-    li.separator {
-        margin: 0;
-        font-size: 6rem;
-        color: blueviolet;
-    }
-
-    li:first-of-type {
-        margin-right: 5rem;
-    }
+   .waiting {
+    height: 50vh;
+   }

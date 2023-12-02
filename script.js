@@ -1,34 +1,40 @@
-var daysEl = document.getElementsById('days');
-var hoursEl = document.getElementsById('hours');
-var minutesEl = document.getElementsById('minutes');
-var secondsEl = document.getElementsById('seconds');
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
 
-function countdownTimer() {
-    const countdownTimer = new Date('12-01-2023').getTime()
 
-    const second = 1000
-    const minute = second * 60
-    const hour = minute * 60
-    const day = hour * 24
-
-    const interval = setInterval(() => {
-
-    const now = new Date().getTime()
-    const distance = countdownDate - now
-
-    daysEl.innerText = formatNumber(Math.floor(distace / day))
-    hoursEl.innerText = formatNumber(Math.floor(distace % day / hour))
-    minutesEl.innerText = formatNumber(Math.floor(distace % day / minute))
-    secondsEl.innerText = formatNumber(Math.floor(distace % day / second))
-    }, 1000)
+if (bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('active');
+    })
 }
 
-function formatNumber(number) {
-    if(number <10) {
-        return '0' + number
-    }
-    
-    return number
+if (close) {
+    close.addEventListener('click', () => {
+        nav.classList.remove('active');
+    })
 }
 
-countdownTimer()
+/* countdown clock*/
+const countDate = new Date("Apr 24, 2024 00:00:00").getTime();
+const now = new Date().getTime();
+const remainingTime = countDate - now;
+/* caculate time in days, hours, mins, seconds*/
+const seconds = 1000;
+const minutes = seconds * 60;
+const hours = minutes * 60;
+const days = hours * 60;
+
+const textDays = Math.floor(remainingTime / days);
+const textHours = Math.floor((remainingTime % days) / hours);
+const textMinutes = Math.floor((remainingTime % hours) / minutes);
+const textSeconds = Math.floor((remainingTime % minutes) / seconds);
+
+/* update html */
+document.querySelector(".days").innerText = textDays > 0 ? textDays: 0;
+document.querySelector(".hours").innerText = textHours > 0 ? textHours: 0;
+document.querySelector(".minutes").innerText = textMinutes > 0 ? textMinutes: 0;
+document.querySelector(".seconds").innerText = textSeconds > 0 ? textSeconds: 0;
+
+/*run the countdown */
+setInterval(countdown, 500);
